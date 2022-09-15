@@ -1,0 +1,36 @@
+
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+### Get all walkings
+GET  http://localhost:3003/walkings/
+
+### Get all walkings by date
+GET  http://localhost:3003/walkings/search/2022-09-10
+
+
+### Get all walkings by status
+GET  http://localhost:3003/walkings/to do
+
+### Create walk
+POST http://localhost:3003/walkings/create
+Content-Type: application/json
+
+    {
+        "schedule": "2022-09-09",
+        "duration": "30",
+        "latitude": 1452,
+        "longitude": 1330,
+        "pets": 1,
+        "start_walking": "14:00",
+        "finish_walking":"14:30"
+
+    }
+
+### Edit Walking Status
+PUT http://localhost:3003/walkings/edit/14ade918-9565-4582-be47-471bb0491577
+Content-Type: application/json
+
+{
+    "status": "doing"
+}
